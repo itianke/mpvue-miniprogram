@@ -17,13 +17,19 @@
       </div>
     </view>
 
-    <today-trip v-if="currentItemId === 2"></today-trip>
+    <today-trip v-if="currentItemId === 1"></today-trip>
+    <school-line v-if="currentItemId === 2"></school-line>
+    <parent v-if="currentItemId === 3"></parent>
+    <pick-up v-if="currentItemId === 4"></pick-up>
   </layout>
 </template>
 
 <script>
 import layout from '@/components/layout'
 import todayTrip from '@/components/today-trip'
+import schoolLine from '@/components/school-line'
+import pickUp from '@/components/pick-up'
+import parent from '@/components/parent'
 export default {
   data () {
     return {
@@ -76,7 +82,10 @@ export default {
   },
   components: {
     layout,
-    todayTrip
+    todayTrip,
+    schoolLine,
+    pickUp,
+    parent
   },
   methods: {
     handleNavItem (item) {
@@ -89,7 +98,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 .sw-wrap {
   border-radius: 5px;
   overflow: hidden;

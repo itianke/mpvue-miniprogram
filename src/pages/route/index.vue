@@ -87,7 +87,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 #myMap {
   height: 100vh;
   width: 100%;
@@ -98,30 +98,30 @@ export default {
   left: 0;
   right: 0;
   z-index: 1;
-}
-.form-item {
-  display: flex;
-  padding: 10px 0;
-  font-size: 14px;
-  color: #333;
-}
-.form-item:first-of-type {
-  border-bottom: 1px solid #cccc;
-}
-.point {
-  width: 16px;
-  height: 16px;
-  margin-right: 10px;
-}
-.point img {
-  display: block;
-  width: 100%;
-  height: 100%;
-}
-.form-item .text {
-  height: 16px;
-  line-height: 16px;
-  font-size: 14px;
-  width: 100%;
+  .form-item {
+    display: flex;
+    padding: 12px 0;
+    font-size: 14px;
+    color: #333;
+    .point {
+      width: 16px;
+      height: 16px;
+      margin-right: 10px;
+      img {
+        display: block;
+        width: 100%;
+        height: 100%;
+      }
+    }
+    &:first-of-type {
+      border-bottom: 1px solid #cccc;
+    }
+    .text {
+      height: 16px;
+      line-height: 16px;
+      font-size: 14px;
+      width: 100%;
+    }
+  }
 }
 </style>

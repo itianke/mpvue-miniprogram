@@ -43,34 +43,31 @@ export default {
 }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 .userinfo {
   display: flex;
   flex-direction: column;
   align-items: center;
+  .userinfo-avatar {
+    width: 60px;
+    height: 60px;
+    margin: 20px;
+    border-radius: 50%;
+    background-color: #ccc;
+  }
+  .btn {
+    width: 60%;
+    margin-top: 20px;
+  } 
+  .apply {
+    color: #333;
+    font-size: 18px;
+  }
+  .info {
+    color: #616161;
+    margin: 10px;
+    font-size: 14px;
+  }
 }
 
-.userinfo-avatar {
-  width: 60px;
-  height: 60px;
-  margin: 20px;
-  border-radius: 50%;
-  background-color: #ccc;
-}
-
-.btn {
-  width: 60%;
-  margin-top: 20px;
-} 
-
-.apply {
-  color: #333;
-  font-size: 18px;
-}
-
-.info {
-  color: #616161;
-  margin: 10px;
-  font-size: 14px;
-}
 </style>

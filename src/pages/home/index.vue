@@ -137,88 +137,87 @@ export default {
 }
 </script>
 
-<style>
-.avatar {
-  width: 30px;
-  height: 30px;
-  margin-right: 5px;
-  float: left;
-}
-.avatar img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  border-radius: 50%;
-}
+<style scoped lang="scss">
 .top-header {
   position: relative;
   height: 30px;
+  .avatar {
+    width: 30px;
+    height: 30px;
+    margin-right: 5px;
+    float: left;
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      border-radius: 50%;
+    }
+  }
+  .arrow {
+    height: 30px;
+    width: 30px;
+    float: right;
+    position: relative;
+    img {
+      display: block;
+      width: 16px;
+      height: 16px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin: -8px 0 0 -8px;
+    }
+  }
+  .user-name {
+    height: 30px;
+    line-height: 30px;
+    font-size: 16px;
+    font-weight: bold;
+    float: left;
+  }
 }
-.top-header .arrow {
-  height: 30px;
-  width: 30px;
-  float: right;
-  position: relative;
-}
-.top-header .arrow img {
-  display: block;
-  width: 16px;
-  height: 16px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin: -8px 0 0 -8px;
-}
-.user-name {
-  height: 30px;
-  line-height: 30px;
-  font-size: 16px;
-  font-weight: bold;
-  float: left;
-}
-
 .form-item {
   height: 16px;
   padding: 15px 0;
   font-size: 14px;
   color: #333;
   border-bottom: 1px solid #ececec;
-}
-.form-item:last-of-type {
-  border-bottom: none;
-}
-.point {
-  width: 16px;
-  height: 16px;
-  margin-right: 10px;
-  float: left;
-}
-.point img {
-  display: block;
-  width: 100%;
-  height: 100%;
-}
-.form-item .text {
-  width: 200px;
-  height: 16px;
-  line-height: 16px;
-  font-size: 14px;
-  float: left;
+  .text {
+    width: 200px;
+    height: 16px;
+    line-height: 16px;
+    font-size: 14px;
+    float: left;
+  }
+  .point {
+    width: 16px;
+    height: 16px;
+    margin-right: 10px;
+    float: left;
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  &:last-of-type {
+    border-bottom: none;
+  }
 }
 .main-section {
   margin-top: 10px;
   padding: 0 15px!important;
-}
-.main-section .arrow {
-  height: 16px;
-  width: 16px;
-  float: right;
-}
-.main-section .arrow img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  transform: scale(0.8);
+  .arrow {
+    height: 16px;
+    width: 16px;
+    float: right;
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      transform: scale(0.8);
+    }
+  }
 }
 </style>

@@ -1,33 +1,38 @@
 <template>
 <div class="page-section">
-  <div class="trip-title">今日行程</div>
-  <div class="trip-card" v-for="item in 1" :key="item">
-    <div class="trip-column">
-      <div class="school-name">深圳龙华第一小学</div>
-      <div class="school-item">
-        <div class="road-name">国基路</div>
-        <div class="road-gap">距您</div>
-        <div class="road-dis">2.3 公里</div>
+    <div class="trip-title">同校家长</div>
+    <!-- <div class="trip-card" v-for="item in 1" :key="item">
+      <div class="trip-column">
+        <div class="school-name">赵日天</div>
+        <div class="school-item">
+          <div class="road-name">国基路</div>
+          <div class="road-gap">距您</div>
+          <div class="road-dis">2.3 公里</div>
+        </div>
+        <div class="school-item">
+          <div class="road-name">三全路</div>
+          <div class="road-gap">距您</div>
+          <div class="road-dis">2.3 公里</div>
+        </div>
       </div>
-      <div class="school-item">
-        <div class="road-name">三全路</div>
-        <div class="road-gap">距您</div>
-        <div class="road-dis">2.3 公里</div>
+      <div class="trip-column">
+        <div class="count">2/5 可加入</div>
+        <div class="btn">
+          <button type="danger" size="mini">路线详情</button>
+        </div>
       </div>
-    </div>
-    <div class="trip-column">
-      <div class="count">2/5 可加入</div>
-      <div class="btn">
-        <button type="danger" size="mini">路线详情</button>
-      </div>
-    </div>
-  </div>
+    </div> -->
+    <no-data></no-data>
 </div>
 </template>
 
 <script>
+import noData from '@/components/no-data'
 export default {
-  name: 'layout'
+  name: 'parent',
+  components: {
+    noData
+  }
 }
 </script>
 
@@ -124,5 +129,4 @@ export default {
     }
   }
 }
-
 </style>

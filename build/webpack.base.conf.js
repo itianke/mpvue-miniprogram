@@ -8,6 +8,7 @@ var vueLoaderConfig = require('./vue-loader.conf')
 var MpvuePlugin = require('webpack-mpvue-asset-plugin')
 var glob = require('glob')
 var CopyWebpackPlugin = require('copy-webpack-plugin')
+// var ExtractTextPlugin = require('extract-text-webpack-plugin')
 var relative = require('relative')
 
 function resolve (dir) {
@@ -54,6 +55,10 @@ let baseWebpackConfig = {
   },
   module: {
     rules: [
+      // {
+      //   test: /\.scss$/,
+      //   loaders: ['style', 'css', 'sass']
+      // },
       {
         test: /\.(js|vue)$/,
         loader: 'eslint-loader',
