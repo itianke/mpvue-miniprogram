@@ -1,32 +1,68 @@
 {
-    "description": "项目配置文件。",
-    "setting": {
-        "urlCheck": true,
-        "es6": false,
-        "postcss": true,
-        "minified": true,
-        "newFeature": true
+  "description": "项目配置文件。",
+  "setting": {
+    "urlCheck": true,
+    "es6": false,
+    "postcss": true,
+    "minified": true,
+    "newFeature": true
+  },
+  "miniprogramRoot": "dist/wx/",
+  "compileType": "miniprogram",
+  "appid": "wxfd0f08c6af55c0ca",
+  "projectname": "mpvue-mini-demo",
+  "condition": {
+    "search": {
+      "current": -1,
+      "list": []
     },
-    "miniprogramRoot": "dist/wx/",
-    "compileType": "miniprogram",
-    "appid": "wxfd0f08c6af55c0ca",
-    "projectname": "mpvue-mini-demo",
-    "condition": {
-        "search": {
-            "current": -1,
-            "list": []
-        },
-        "conversation": {
-            "current": -1,
-            "list": []
-        },
-        "game": {
-            "currentL": -1,
-            "list": []
-        },
-        "miniprogram": {
-            "current": -1,
-            "list": []
-        }
+    "conversation": {
+      "current": -1,
+      "list": []
+    },
+    "game": {
+      "currentL": -1,
+      "list": []
+    },
+    "miniprogram": {
+      "current": -1,
+      "list": []
     }
+  },
+  // 可在 project.config.json 增加字段 skeleton-config 进行骨架屏相关配置，页面配置会覆盖掉全局配置。
+  "skeleton-config": {
+    "global": {
+      // 默认的全局配置
+      "loading": "",
+      "text": {
+        "color": "#EEEEEE"
+      },
+      "image": {
+        "shape": "",
+        "color": "#EFEFEF",
+        "shapeOpposite": []
+      },
+      "button": {
+        "color": "#EFEFEF",
+        "excludes": []
+      },
+      "pseudo": {
+        "color": "#EFEFEF",
+        "shape": "circle",
+        "shapeOpposite": []
+      },
+      "excludes": [],
+      "remove": [],
+      "empty": [],
+      "hide": [],
+      "grayBlock": [],
+      "showNative": false,
+      "backgroundColor": "transparent",
+      "mode": "fullscreen",
+      "templateName": "skeleton",
+      "cssUnit": "rpx",
+      "decimal": 4
+    }
+  },
+  "cloudbaseRoot": "/static/cloudbase/"
 }
