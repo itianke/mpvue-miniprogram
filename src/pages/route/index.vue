@@ -50,12 +50,12 @@ export default {
         type: 'wgs84',
         isHighAccuracy: true,
         success: resp => {
-          console.log(resp)
           this.latitude = resp.latitude
           this.longitude = resp.longitude
         }
       })
     },
+
     // 获取地图选点
     getChooseLocation () {
       const location = JSON.stringify({
@@ -68,18 +68,19 @@ export default {
       })
     }
   },
+
   // 从地图选点插件返回后，在页面的onShow生命周期函数中能够调用插件接口，取得选点结果对象
   onShow () {
     // 获取地图选点后的数据
     const chooseLocation = requirePlugin('chooseLocation')
     const location = chooseLocation.getLocation() // 如果点击确认选点按钮，则返回选点结果对象，否则返回null
     if (location) {
-      console.log(location)
       this.latitude = location.latitude
       this.longitude = location.longitude
       this.location = location
     }
   },
+
   onHide () {
     this.location.name = '深圳北站'
     this.handleGetLocation()

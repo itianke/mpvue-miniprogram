@@ -8,7 +8,9 @@
       />
       <div class="apply">申请获取以下权限</div>
       <div class="info">获取您的公开信息(昵称，头像，手机号码等)</div>
-      <button class="btn" type="primary" size="small" @click="handleAuth">授权登陆</button>
+      <button class="btn" type="primary" size="small" @click="handleAuth">
+        授权登陆
+      </button>
     </div>
   </div>
 </template>
@@ -24,19 +26,39 @@ export default {
       }
     }
   },
+  created () {
+    this.findUserInfo()
+  },
   methods: {
+    // 拉起用户授权
     handleAuth () {
       wx.getUserProfile({
         desc: '用于完善会员资料', // 声明获取用户个人信息后的用途，后续会展示在弹窗中，请谨慎填写
-        success: resp => {
-          console.log(resp)
-          console.log('---------------')
+        success: (resp) => {
+          this.addUserRecord(resp.userInfo)
           wx.setStorage({
             key: 'userInfo',
             data: JSON.stringify(resp.userInfo)
           })
           wx.switchTab({ url: '/pages/main/main' })
         }
+      })
+    },
+
+    // 将新用户的个人信息添加进用户表 user
+    addUserRecord (data) {
+      wx.cloud.database().collection('user').add({
+        data: data,
+        success: resp => {
+          console.log(resp)
+        }
+      })
+    },
+
+    // 查询用户信息
+    findUserInfo () {
+      wx.cloud.database().collection('user').get().then(resp => {
+        console.log(resp.data)
       })
     }
   }
@@ -58,7 +80,7 @@ export default {
   .btn {
     width: 60%;
     margin-top: 20px;
-  } 
+  }
   .apply {
     color: #333;
     font-size: 18px;
@@ -69,5 +91,4 @@ export default {
     font-size: 14px;
   }
 }
-
 </style>

@@ -84,13 +84,11 @@ export default {
       wx.getStorage({
         key: 'userInfo',
         success: resp => {
-          console.log('===============')
-          console.log(JSON.parse(resp.data))
-          console.log(this.userInfo)
           this.userInfo = resp ? JSON.parse(resp.data) : {}
         }
       })
     },
+
     // 初始化路线规划页面
     getPositionService () {
       let endPoint = JSON.stringify({
@@ -122,13 +120,13 @@ export default {
       })
     }
   },
+
   // 从地图选点插件返回后，在页面的onShow生命周期函数中能够调用插件接口，取得选点结果对象
   onShow () {
     // 获取地图选点后的数据
     const chooseLocation = requirePlugin('chooseLocation')
     const location = chooseLocation.getLocation() // 如果点击确认选点按钮，则返回选点结果对象，否则返回null
     if (location) {
-      console.log(location)
       this.latitude = location.latitude
       this.longitude = location.longitude
       this.location = location
